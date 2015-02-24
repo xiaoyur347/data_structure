@@ -17,6 +17,7 @@ set (TEST_LIST
 	${GTEST_LIST}
 	
 	test/ds_vector_test.cpp
+	test/ds_slist_test.cpp
 )
 
 add_executable(${PROJECT_NAME} ${TEST_LIST})
