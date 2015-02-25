@@ -13,8 +13,13 @@ set (GTEST_LIST
 	gtest/src/gtest_main.cc
 )
 
+set (SRC_LIST
+	src/ds_kmp.cpp
+)
+
 set (TEST_LIST
 	${GTEST_LIST}
+	${SRC_LIST}
 	
 	test/ds_vector_test.cpp
 	test/ds_slist_test.cpp
