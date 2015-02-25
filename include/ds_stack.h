@@ -78,6 +78,16 @@ public:
 		
 		return pHead->data;
 	}
+	const TYPE &top() const
+	{
+		const_pointer pHead = _M_head->next;
+		if (pHead == NULL)
+		{
+			std::__throw_out_of_range(__N("stack::_M_range_check"));
+		}
+		
+		return pHead->data;
+	}
 private:
 	pointer _M_head;
 };
