@@ -1,0 +1,59 @@
+void head_recursive(BinaryTree *pNode)
+{
+	if (node != NULL)
+	{
+		compare(node->data);
+		if (node->left != NULL)
+		{
+			head_recursive(node->left);
+		}
+		if (node->right != NULL)
+		{
+			head_recursive(node->right);
+		}
+	}
+	else
+	{
+		return;
+	}
+}
+
+void mid_recursive(BinaryTree *pNode)
+{
+	if (node != NULL)
+	{
+		if (node->left != NULL)
+		{
+			mid_recursive(node->left);
+		}
+		compare(node->data);
+		if (node->right != NULL)
+		{
+			mid_recursive(node->right);
+		}
+	}
+	else
+	{
+		return;
+	}
+}
+
+void tail_recursive(BinaryTree *pNode)
+{
+	if (node != NULL)
+	{
+		if (node->left != NULL)
+		{
+			tail_recursive(node->left);
+		}
+		if (node->right != NULL)
+		{
+			tail_recursive(node->right);
+		}
+		compare(node->data);
+	}
+	else
+	{
+		return;
+	}
+}
