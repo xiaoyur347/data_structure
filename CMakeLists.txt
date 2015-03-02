@@ -26,6 +26,8 @@ set (TEST_LIST
 	test/ds_list_test.cpp
 	test/ds_stack_test.cpp
 	test/ds_queue_test.cpp
+	
+	test/ds_sort_test.cpp
 )
 
 add_executable(${PROJECT_NAME} ${TEST_LIST})
