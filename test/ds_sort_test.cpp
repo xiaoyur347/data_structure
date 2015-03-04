@@ -203,7 +203,7 @@ void HeapSort(vector<int> & vec)
 		HeapAdjust(vec, i, vec.size());
 	}
 	
-	for (end = size - 1; end > 0; --end)
+	for (int end = size - 1; end > 0; --end)
 	{
 		//move the biggest to the end
 		Swap(vec, 0, end);
