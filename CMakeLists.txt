@@ -3,7 +3,7 @@ project(data_structure)
 
 set(GNU_FLAGS "-g -O0 -Wall -Wextra -Wno-unused-result -Wshadow -m32")
 set(CMAKE_C_FLAGS "${GNU_FLAGS} $ENV{CFLAGS}")
-set(CMAKE_CXX_FLAGS "${GNU_FLAGS} $ENV{CXXFLAGS}")
+set(CMAKE_CXX_FLAGS "${GNU_FLAGS} $ENV{CXXFLAGS} -std=c++0x")
 
 include_directories(gtest)
 include_directories(gtest/include)
@@ -17,9 +17,14 @@ set (SRC_LIST
 	src/ds_kmp.cpp
 )
 
+set (STL_TEST
+	stl_test/stl_array_test.cpp
+)
+
 set (TEST_LIST
 	${GTEST_LIST}
 	${SRC_LIST}
+	${STL_TEST}
 	
 	test/ds_vector_test.cpp
 	test/ds_slist_test.cpp
@@ -28,6 +33,7 @@ set (TEST_LIST
 	test/ds_queue_test.cpp
 	
 	test/ds_sort_test.cpp
+	test/ds_graph_test.cpp
 )
 
 add_executable(${PROJECT_NAME} ${TEST_LIST})
